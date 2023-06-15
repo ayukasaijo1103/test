@@ -96,3 +96,16 @@ main .slider{
 .slick-arrow{ z-index:100; }
 .slick-next{ right:10px;}/*内側に右から10ピクセル移動*/
 .slick-prev{ left:10px; }/*内側に左から10ピクセル移動*/
+
+.py-terminal{
+color: black !important;
+width: 300px;
+height: 300px;
+margin-left: 100px;
+background-color:transparent !important;
+outline: red solid 1px;
+}
+
+.slider{
+  display: flex;
+}
