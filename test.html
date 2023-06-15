@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #slider {
+      width: 1000px;  /* スライダーの幅 */
+      height: 500px; /* スライダーの高さ */
+      overflow: hidden; /* スライダー内の要素をはみ出させない */
+    }
+    img{
+        width: 1000px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    #slider .slides {
+      display: flex; /* スライド要素を横並びにする */
+      transition: transform 0.5s ease-in-out; /* スライドのアニメーション効果 */
+    }
+
+    #slider .slide {
+      width: 1000px;  /* 1つのスライドの幅 */
+      height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="C:\Users\motor\Desktop\test\images\big-bg.png" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="C:\Users\motor\Desktop\test\images\big-bg2.png" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="C:\Users\motor\Desktop\test\images\big-bg3.png" alt="Image 3">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScriptでスライドの動作を制御する
+    var slider = document.getElementById("slider");
+    var slides = document.querySelector("#slider .slides");
+    var slideWidth = document.querySelector("#slider .slide").offsetWidth;
+
+    function slideNext() {
+      slides.style.transform = "translateX(-" + slideWidth + "px)";
+      slides.appendChild(slides.firstElementChild);
+    }
+
+    setInterval(slideNext, 2000);  // 2秒ごとにスライドを変更する
+  </script>
+</body>
+</html>

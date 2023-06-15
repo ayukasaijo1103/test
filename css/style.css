@@ -1,0 +1,98 @@
+svg {
+  background-color: #28505D;
+}
+
+.planePath {
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .1%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
+
+svg{
+  height: 200px;
+  width: 100%;
+}
+
+.keyframe3{
+  
+    animation-name: anim_s;
+  
+    transform: rotate(30deg);
+  
+    animation-duration: 3s;
+
+    animation-iteration-count: infinite;
+  
+  }
+  
+   
+  
+  @keyframes anim_s {
+  
+    50% {
+  
+      transform: rotate(-25deg);
+  
+    }
+  
+    100% {
+  
+      transform: rotate(30deg);
+  
+    }
+  
+  }
+
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  
+
+/*==// スライダーと文字のwrap //==*/
+main > div{ position:relative; }
+/*==// 上に載せる文字部分 //==*/
+main > div section{
+	color:#fff;
+	position:absolute;
+	/*上下中央に文字配置*/
+	top:50%;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	left:10%;
+}
+main > div section h2{ margin-bottom:15px; font-size:30px; font-size:3rem; }
+main > div section p{ font-size:18px; font-size:1.8rem; }
+/*===================================
+ スライダーの指定だけならここから下だけでOK
+===================================*/
+/*==// スライダーのコンテナ //==*/
+main .slider{
+		padding-top:46px;/*戻るボタンの高さ分あけてます*/
+		width:100%;/* スライダーの幅を指定*/
+		list-style:none;
+	}
+/*==//  ここから矢印  //==*/
+.slick-arrow{ z-index:100; }
+.slick-next{ right:10px;}/*内側に右から10ピクセル移動*/
+.slick-prev{ left:10px; }/*内側に左から10ピクセル移動*/
